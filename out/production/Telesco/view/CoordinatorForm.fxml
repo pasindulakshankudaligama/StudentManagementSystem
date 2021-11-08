@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CoordinatorContext" prefHeight="892.0" prefWidth="1370.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CoordinatorFormController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/5.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="191.0" layoutY="48.0" prefHeight="17.0" prefWidth="1165.0" style="-fx-background-color: #2c3e50;" />
+      <JFXButton buttonType="RAISED" layoutX="431.0" layoutY="102.0" onAction="#addExamOnAction" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Add Exam" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="102.0" onAction="#collectFeesOnAction" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Collect Fees" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="16.0" layoutY="102.0" onAction="#registrationStudentOnAction" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Registration" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblCoordinator" layoutX="8.0" layoutY="215.0" prefHeight="670.0" prefWidth="1356.0" stylesheets="@../assets/styles/style.css">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="158.99993896484375" text="Student Id" />
+            <TableColumn fx:id="colStudentName" prefWidth="234.0" text="Student Name" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="265.0" text="Address" />
+            <TableColumn fx:id="colPhoneNumber" minWidth="0.0" prefWidth="302.0" text="Phone Number" />
+            <TableColumn fx:id="colDOB" minWidth="0.0" prefWidth="201.0" text="Date Of Birth" />
+            <TableColumn fx:id="colAge" minWidth="0.0" prefWidth="194.0" text="Age" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton layoutX="1238.0" layoutY="74.0" onAction="#logOutOnAction" style="-fx-background-color: #e74c3c; -fx-background-radius: 10;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtStudentId" labelFloat="true" layoutX="14.0" layoutY="162.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="140.0" promptText="Student Id" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="TxtStudentName" labelFloat="true" layoutX="163.0" layoutY="164.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="255.0" promptText="Student Name" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="TxtAddress" labelFloat="true" layoutX="431.0" layoutY="164.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="255.0" promptText="Address" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="TxtPhoneNumber" labelFloat="true" layoutX="701.0" layoutY="164.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="200.0" promptText="PhoneNumber" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="TxtDOB" labelFloat="true" layoutX="913.0" layoutY="164.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="169.0" promptText="Date of Birth" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="TxtAge" labelFloat="true" layoutX="1096.0" layoutY="164.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="116.0" promptText="Age" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddStudent" buttonType="RAISED" layoutX="1224.0" layoutY="163.0" onAction="#AddStudentOnAction" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Add Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="registerContext" prefHeight="952.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterStudentFormController">
+   <children>
+      <ImageView fitHeight="69.0" fitWidth="396.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/1.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="354.0" layoutY="124.0" onKeyReleased="#keyEvent" prefHeight="26.0" prefWidth="228.0" promptText="Student Name" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="418.0" layoutY="189.0" onAction="#registerStudentOnAction" onMouseClicked="#onClick" style="-fx-background-color: #3498db; -fx-background-radius: 5;" text="Register Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="222.0" layoutY="189.0" onAction="#updateStudentOnAction" style="-fx-background-color: #f39c12; -fx-background-radius: 5;" text="Update Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="24.0" layoutY="189.0" onAction="#deleteStudentOnAction" style="-fx-background-color: #e74c3c; -fx-background-radius: 5;" text="Delete Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblRegister" layoutX="24.0" layoutY="291.0" onMouseClicked="#onMouseHandle" prefHeight="601.0" prefWidth="589.0" stylesheets="@../assets/styles/style.css">
+        <columns>
+          <TableColumn fx:id="colRegisterId" prefWidth="248.0" text="Register Id" />
+          <TableColumn fx:id="colStudentName" prefWidth="339.0" text="Student Name" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="24.0" layoutY="905.0" onAction="#cancelOnAction" style="-fx-background-color: #e74c3c; -fx-background-radius: 10;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblRegister" layoutX="468.0" layoutY="33.0" text="R-001">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="136.0" text="Register Id : ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentId" layoutX="202.0" layoutY="136.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" focusColor="WHITE" layoutX="24.0" layoutY="241.0" onAction="#searchOnAction" prefHeight="39.0" prefWidth="270.0" promptText="Search" style="-fx-prompt-text-fill: #bdc3c7;" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="328.0" layoutY="244.0" onMouseClicked="#printIdOnClick" style="-fx-background-color: #3498db; -fx-background-radius: 5;" text="Print Id" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

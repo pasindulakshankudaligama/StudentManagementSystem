@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ExamContext" prefHeight="816.0" prefWidth="450.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddExamFormController">
+   <children>
+      <ImageView fitHeight="53.0" fitWidth="304.0" layoutX="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/1.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtExamId" labelFloat="true" layoutX="11.0" layoutY="211.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="93.0" promptText="Exam Id" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtSubject" labelFloat="true" layoutX="138.0" layoutY="211.0" onKeyReleased="#keyEvent" prefHeight="33.0" prefWidth="174.0" promptText="Subject" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddExam" buttonType="RAISED" layoutX="324.0" layoutY="212.0" onAction="#addExamOnAction" style="-fx-background-color: #3498db; -fx-background-radius: 5;" text="Add Exam" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="131.0" layoutY="760.0" onAction="#deleteExamOnAction" style="-fx-background-color: #e74c3c; -fx-background-radius: 5;" text="Delete Exam" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblExam" layoutX="11.0" layoutY="260.0" prefHeight="484.0" prefWidth="428.0" stylesheets="@../assets/styles/style.css">
+        <columns>
+          <TableColumn fx:id="colExamId" prefWidth="207.0" text="Exam Id" />
+          <TableColumn fx:id="colSubject" prefWidth="242.0" text="Subject" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="25.0" layoutY="760.0" onAction="#CancelOnAction" style="-fx-background-color: #e74c3c; -fx-background-radius: 5;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="10.0" layoutY="79.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="80.0" layoutY="79.0" text="2021-02-20">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbRegisterId" layoutX="10.0" layoutY="142.0" prefHeight="26.0" prefWidth="112.0" promptText="Register Id" />
+      <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="154.0" layoutY="138.0" prefHeight="33.0" prefWidth="276.0" promptText="Student Name" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
